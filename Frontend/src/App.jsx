@@ -10,9 +10,12 @@ function App() {
     setPrompt(event.target.value);
   }
   async function generateResponse() {
-    const res = await axios.post("http://127.0.0.1:8000/generate", {
-      prompt: prompt,
-    });
+    const res = await axios.post(
+      "https://mini-gemini-ai-1.onrender.com/generate",
+      {
+        prompt: prompt,
+      },
+    );
     setOutput(res.data.response);
   }
 
