@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import Sidebar from "./components/Sidebar";
-import Header from "./components/Header";
+import Header from "./components/header";
 import Chat from "./components/Chat";
-import InputBox from "./components/InputBox";
+import InputBox from "./components/Inputbox";
 import "./App.css";
 
 const API_URL = "https://mini-gemini-ai-1.onrender.com/generate";
