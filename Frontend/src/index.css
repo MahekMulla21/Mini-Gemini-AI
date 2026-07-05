@@ -1,0 +1,107 @@
+/* ==========================================================
+   Fonts — Sora for display/UI chrome, Inter for reading text
+   ========================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap");
+
+/* ==========================================================
+   Design tokens
+   ========================================================== */
+:root {
+  --void: #06070f;
+  --void-2: #0b0e1d;
+  --panel: rgba(255, 255, 255, 0.045);
+  --panel-strong: rgba(255, 255, 255, 0.075);
+  --border: rgba(255, 255, 255, 0.09);
+  --border-soft: rgba(255, 255, 255, 0.06);
+
+  --violet: #7c5cff;
+  --violet-2: #4f46e5;
+  --cyan: #22d3ee;
+  --pink: #f472b6;
+  --amber: #fbbf24;
+
+  --text-hi: #f2f3fb;
+  --text-mid: #b7bdd6;
+  --text-low: #767e9e;
+
+  --danger: #fb7185;
+  --success: #34d399;
+
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+
+  --font-display: "Sora", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --void: #eef0fa;
+  --void-2: #e3e6f6;
+  --panel: rgba(20, 22, 46, 0.04);
+  --panel-strong: rgba(20, 22, 46, 0.07);
+  --border: rgba(20, 22, 46, 0.1);
+  --border-soft: rgba(20, 22, 46, 0.06);
+
+  --text-hi: #14162e;
+  --text-mid: #454a6b;
+  --text-low: #7d83a3;
+
+  color-scheme: light;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--void);
+  color: var(--text-hi);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+textarea,
+input {
+  font-family: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--cyan), var(--violet-2));
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
